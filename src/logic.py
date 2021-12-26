@@ -3,6 +3,7 @@ import pytz
 
 
 def area(location):
+    """This function takes in a location as argument, checks the list of locations available and returns the formatted time to the user."""
     location = format_location(location)
     for areas in pytz.all_timezones:
         if location.lower() in areas.lower():
@@ -18,6 +19,7 @@ def area(location):
 
 
 def area_zone(zone):
+    """This function takes in a time zone as argument, checks the list of timezones and returns the formatted time to the user."""
     try:
         zone = timezones(zone)
         tz = pytz.timezone(zone)
